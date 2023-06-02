@@ -1,6 +1,4 @@
-Sure, I'll draft a README.md for the specific topic "Python Import Modules" for Holberton School.
 
-```markdown
 # Python Import Modules - Holberton School
 
 This course segment focuses on Python's import system and how to use modules in Python. Students will learn about built-in modules, creating custom modules, and different methods of importing them into their scripts.
