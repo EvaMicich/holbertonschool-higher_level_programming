@@ -1,5 +1,4 @@
 # Python - Classes and Objects
-Amateur By: Guillaume Weight: 1
 
 ## Background Context
 
