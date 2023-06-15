@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Module: adds 2 numbers (int/foat)
+"""
+
+
 def add_integer(a, b=98):
     """
     adds to integer
