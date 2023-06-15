@@ -36,3 +36,15 @@ Now use it:
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
+    inf as arguments:
+    >>> add_integer(float('inf'), float('inf'))
+    Traceback (most recent call last):
+    	      ...
+    OverflowError: cannot convert float infinity to integer
+
+    NaN as argument:
+    >>> add_integer(float('NaN'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
