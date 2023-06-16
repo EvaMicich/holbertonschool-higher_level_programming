@@ -25,7 +25,7 @@ def text_indentation(text):
                 continue
             after_new_line = False
         if c == '.' or c == '?' or c == ':':
-            print("")
+            print(c)
             print("")
             after_new_line = True
         else:

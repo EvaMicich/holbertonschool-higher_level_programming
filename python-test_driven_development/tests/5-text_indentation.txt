@@ -11,7 +11,7 @@ First import ``text_indentation`` from the ``5-text_indentation`` module:
 
     Block of text with "." in it, 2 new lines added:
     >>> text_indentation("abc.defg")
-    abc
+    abc.
     <BLANKLINE>
     defg
 
