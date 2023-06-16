@@ -20,3 +20,9 @@ First import ``text_indentation`` from the ``5-text_indentation`` module:
     Traceback (most recent call last):
     ...
     TypeError: text must be a string
+
+    Missing argument
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
