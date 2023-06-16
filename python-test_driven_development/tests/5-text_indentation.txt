@@ -8,8 +8,15 @@ First import ``text_indentation`` from the ``5-text_indentation`` module:
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
     Now use it:
-    Block of text with chars in it
+
+    Block of text with "." in it, 2 new lines added:
     >>> text_indentation("abc.defg")
     abc
     <BLANKLINE>
     defg
+
+    Argument is an int, not a string. returns TypeError: text must be a string
+    >>> text_indentation(22)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
