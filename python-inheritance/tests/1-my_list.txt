@@ -8,5 +8,15 @@ First import ``MyList`` from the ``1-my_list`` module:
     >>> MyList = __import__('1-my_list').MyList
 
     Now use it:
+
+    sort basic numbers:
     >>> MyList.print_sorted([1,4,3,2])
     [1, 2, 3, 4]
+
+    emptylist:
+    >>> MyList.print_sorted([])
+    []
+
+    negative numbers:
+    >>> MyList.print_sorted([-1, 0, 2])
+    [-1, 0, 2]
