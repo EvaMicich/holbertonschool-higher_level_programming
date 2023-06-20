@@ -6,6 +6,14 @@ Using ``integer_validator``
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+    >>> mod_doc = __import__("7-base_geometry").__doc__
+    >>> len(mod_doc) > 1
+    True
+
+    >>> class_doc = __import__("7-base_geometry").BaseGeometry.__doc__
+    >>> len(class_doc) > 1
+    True
+
     create an instance:
     >>> bg = BaseGeometry()
 
