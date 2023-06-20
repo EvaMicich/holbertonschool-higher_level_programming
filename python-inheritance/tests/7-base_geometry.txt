@@ -23,29 +23,34 @@ Using ``integer_validator``
     Exception: area() is not implemented
 
     enter a string into the name, an int in the value. return nothing:
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("my_int", 12)
 
     >>> bg.integer_validator("width", 89)
 
     enter two strings, recieve type error:
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", "John")
     Traceback (most recent call last):
     ...
     TypeError: name must be an integer
 
     enter string and zero value, get Value error including the name:
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", 0)
     Traceback (most recent call last):
     ...
     ValueError: age must be greater than 0
 
     enter a string and negative value, get value error:
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("distance", -4)
     Traceback (most recent call last):
     ...
     ValueError: distance must be greater than 0
 
     pass with no parameters:
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator()
     Traceback (most recent call last):
     ...
