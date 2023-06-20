@@ -9,7 +9,6 @@ Using ``integer_validator``
     create an instance:
     >>> bg = BaseGeometry()
 
-    >>> bg = BaseGeometry()
     >>> bg.area()
     Traceback (most recent call last):
     ...
@@ -17,6 +16,8 @@ Using ``integer_validator``
 
     enter a string into the name, an int in the value. return nothing:
     >>> bg.integer_validator("my_int", 12)
+
+    >>> bg.integer_validator("width", 89)
 
     enter two strings, recieve type error:
     >>> bg.integer_validator("name", "John")
@@ -37,7 +38,7 @@ Using ``integer_validator``
     ValueError: distance must be greater than 0
 
     pass with no parameters:
-    >>> bg.integer()
+    >>> bg.integer_validator()
     Traceback (most recent call last):
     ...
-    AttributeError: 'BaseGeometry' object has no attribute 'integer'
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
