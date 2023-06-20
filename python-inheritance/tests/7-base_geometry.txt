@@ -9,6 +9,12 @@ Using ``integer_validator``
     create an instance:
     >>> bg = BaseGeometry()
 
+    >>> bg = BaseGeometry()
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
     enter a string into the name, an int in the value. return nothing:
     >>> bg.integer_validator("my_int", 12)
 
