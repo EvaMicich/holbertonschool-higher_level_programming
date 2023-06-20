@@ -9,6 +9,10 @@ First import ``MyList`` from the ``1-my_list`` module:
 
     Now use it:
 
+    is MyList and list?
+    >>> issubclass(Mylist, list)
+    True
+
     sort basic numbers:
     >>> MyList.print_sorted([1,4,3,2])
     [1, 2, 3, 4]
