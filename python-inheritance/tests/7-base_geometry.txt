@@ -1,0 +1,31 @@
+The 7-base_geometry module
+====================
+
+Using ``integer_validator``
+------------------------
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+    create an instance:
+    >>> bg = BaseGeometry()
+
+    enter a string into the name, an int in the value. return nothing:
+    >>> bg.integer_validator("my_int", 12)
+
+    enter two strings, recieve type error:
+    >>> bg.integer_validator("name", "John")
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    enter string and zero value, get Value error including the name:
+    >>> bg.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: age must be greater than 0
+
+    enter a string and negative value, get value error:
+    >>> bg.integer_validator("distance", -4)
+    Traceback (most recent call last):
+    ...
+    ValueError: distance must be greater than 0
