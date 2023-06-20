@@ -29,3 +29,9 @@ Using ``integer_validator``
     Traceback (most recent call last):
     ...
     ValueError: distance must be greater than 0
+
+    pass with no parameters:
+    >>> bg.integer()
+    Traceback (most recent call last):
+    ...
+    AttributeError: 'BaseGeometry' object has no attribute 'integer'
