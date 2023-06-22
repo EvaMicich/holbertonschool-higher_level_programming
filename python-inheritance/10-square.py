@@ -20,6 +20,7 @@ class Rectangle(BaseGeometry):
     def area(self):
         return self.__width * self.__height
 
+
 class Square(Rectangle):
     """square class inherits from rectangle class"""
     def __init__(self, size):
