@@ -4,12 +4,19 @@ This repository contains Python code that showcases various operations related t
 
 ## Tasks and Files
 0-read_file.py: A function that reads a text file (UTF8) and prints it to stdout.
+
 1-write_file.py: A function that writes a string to a text file (UTF8) and returns the number of characters written.
+
 2-append_write.py: A function that appends a string at the end of a text file (UTF8) and returns the number of characters added.
+
 3-to_json_string.py: A function that returns the JSON representation of an object (string).
+
 4-from_json_string.py: A function that returns an object (Python data structure) represented by a JSON string.
+
 5-save_to_json_file.py: A function that writes an object to a text file, using a JSON representation.
+
 6-load_from_json_file.py: A function that creates an object from a "JSON file".
+
 Task 7: Load, add, save (7-add_item.py) - This task involves writing a script that accepts arguments, adds them to a Python list, and saves them to a file named add_item.json. It tests your understanding of handling command-line arguments, file operations, and JSON data manipulation.
 
 Task 8: Class to JSON (8-class_to_json.py) - The task is about writing a function that returns a dictionary description of an object for JSON serialization. The focus here is on understanding how to translate Python class instances into a dictionary representation, and how JSON serialization works.
