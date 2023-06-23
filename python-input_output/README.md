@@ -1,7 +1,8 @@
-Python Input/Output Project
+# Python Input/Output Project
+
 This repository contains Python code that showcases various operations related to file handling and JSON manipulation.
 
-Tasks and Files
+## Tasks and Files
 0-read_file.py: A function that reads a text file (UTF8) and prints it to stdout.
 1-write_file.py: A function that writes a string to a text file (UTF8) and returns the number of characters written.
 2-append_write.py: A function that appends a string at the end of a text file (UTF8) and returns the number of characters added.
@@ -21,7 +22,7 @@ Task 11: Student to disk and reload (11-student.py) - This task extends task 10 
 
 Task 12: Pascal's Triangle (12-pascal_triangle.py) - This task requires implementing a function pascal_triangle that returns a list of lists of integers representing Pascal's Triangle of n. The challenge here lies in understanding the mathematical logic of Pascal's Triangle and implementing it programmatically.
 
-Learning Objectives
+## Learning Objectives
 By the end of this project, you will be able to:
 
 Open, write, read, and append to a file in Python
@@ -36,7 +37,3 @@ All files are executable and end with a new line
 All modules, classes, and functions have documentation.
 Test Cases
 All test files should be inside a folder named tests and should be text files (extension: .txt). Tests can be executed using the command: python3 -m doctest ./tests/*.
-
-Repository Info
-GitHub repository: holbertonschool-higher_level_programming
-Directory: python-input_output
