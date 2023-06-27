@@ -78,7 +78,10 @@ class Rectangle(Base):
         if self.width == 0 or self.height == 0:
             return ""
         rectangle_str = ""
+        for num in range(self.y):
+            print("")
         for i in range(self.height):
+            rectangle_str += " " * self.x
             for j in range(self.width):
                 rectangle_str += str("#")
             if i != self.height - 1:
