@@ -92,3 +92,26 @@ class Rectangle(Base):
         """returns string describing the rectangle"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
 {self.width}/{self.height}"
+
+    def update(self, *args):
+        """updates values in te rectangle"""
+        try:
+            self.id = args[0]
+        except:
+            pass
+        try:
+            self.width = args[1]
+        except:
+            pass
+        try:
+            self.height = args[2]
+        except:
+            pass
+        try:
+            self.x = args[3]
+        except:
+            pass
+        try:
+            self.y = args[4]
+        except:
+            pass
