@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """rectangle class"""
 from models.base import Base
+import json
 
 
 class Rectangle(Base):
@@ -90,8 +91,10 @@ class Rectangle(Base):
 
     def __str__(self):
         """returns string describing the rectangle"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
-{self.width}/{self.height}"
+        return (
+            f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
+            f"{self.width}/{self.height}"
+            )
 
     def update(self, *args, **kwargs):
         """updates values in te rectangle"""
@@ -106,3 +109,13 @@ class Rectangle(Base):
                 setattr(self, key, kwargs[key])
             except:
                 pass
+
+    def to_dictionary(self):
+        "makes dictionary format of rectangle """
+        return {
+            "x":self.x,
+            "y":self.y,
+            "id":self.id,
+            "height":self.height,
+            "width":self.width,
+            }
