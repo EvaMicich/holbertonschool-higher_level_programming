@@ -112,10 +112,8 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         "makes dictionary format of rectangle """
-        return {
-            "x":self.x,
-            "y":self.y,
-            "id":self.id,
-            "height":self.height,
-            "width":self.width,
-            }
+        att_dict = {}
+        key_list = ["x", "y", "id", "height", "width"]
+        for key in key_list:
+            att_dict[key] = getattr(self, key)
+        return att_dict
