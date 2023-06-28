@@ -48,3 +48,11 @@ class Square(Rectangle):
                 setattr(self, key, kwargs[key])
             except:
                 pass
+
+    def to_dictionary(self):
+        "makes dictionary format of rectangle """
+        att_dict = {}
+        key_list = ["id", "x", "size", "y"]
+        for key in key_list:
+            att_dict[key] = getattr(self, key)
+        return att_dict
