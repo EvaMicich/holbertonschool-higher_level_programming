@@ -46,7 +46,7 @@ class Base():
     def create(cls, **dictionary):
         """creates an instance from a dictionary"""
         if cls.__name__ == "Rectangle":
-            instance  = cls(1,1)
+            instance = cls(1, 1)
         else:
             instance = cls(1)
         instance.update(**dictionary)
