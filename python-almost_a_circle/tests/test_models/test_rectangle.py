@@ -75,3 +75,12 @@ class TestRectangle(unittest.TestCase):
         r1.display()
         sys.stdout = sys.__stdout__
         self.assertEqual(out.getvalue(), "#\n")
+
+    def test_rectangle_display(self):
+        """the string method delivers expected custom message"""
+        out = io.StringIO()
+        sys.stdout = out
+        r1 = Rectangle(1, 1, 1, 1)
+        r1.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(out.getvalue(), "\n #\n")
