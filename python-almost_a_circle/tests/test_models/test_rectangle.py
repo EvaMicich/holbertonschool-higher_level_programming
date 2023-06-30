@@ -59,3 +59,8 @@ class TestRectangle(unittest.TestCase):
         """area is correctly calcultaed for rectangle"""
         r1 = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(r1.area(), 2)
+
+    def test_rectangle_string(self):
+        """the string method delivers expected custom message"""
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(str(r1), "[Rectangle] (12) 2/1 - 4/6")
