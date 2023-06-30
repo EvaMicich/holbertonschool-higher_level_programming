@@ -93,6 +93,11 @@ class TestRectangle(unittest.TestCase):
 
     def test_rectangle_update(self):
         """update changes each argument for rectangle"""
-        r1 = Rectangle(1, 2, 3, 4, 5)
+        r1 = Rectangle(8, 8, 8, 8, 8)
         r1.update(89)
+        self.assertEqual(r1.id, 89)
+
+    def test_rectangle_create(self):
+        """update changes each argument for rectangle"""
+        r1 = Rectangle.create(**{ 'id': 89 })
         self.assertEqual(r1.id, 89)
