@@ -29,3 +29,13 @@ class TestBase(unittest.TestCase):
         """Tests the method to_json_string for different input cases"""
         json_string = Base.to_json_string(None)
         self.assertEqual(json_string, "[]")
+
+    def test_from_json_string(self):
+        """
+        testing the method that turns json string
+        into a list. with different arguments
+        """
+        python_list = Base.from_json_string(None)
+        self.assertEqual(python_list, [])
+        python_list = Base.from_json_string([])
+        self.assertEqual(python_list, [])
