@@ -29,7 +29,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r4.width, 1)
         self.assertEqual(r4.height, 2)
 
-    def test_args_str(self):
+    def test_rect_args_str(self):
         """string argument throws error at every argument position"""
         with self.assertRaises(TypeError):
             r1 = Rectangle("1", 2)
@@ -40,9 +40,22 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r4 = Rectangle(1, 2, 3, "4")
 
-    def test_args_negative(self):
-        """negative argument throws error at every argument position"""
+    def test_rect_args_negative(self):
+        """negative/zero argument throws error at every argument position"""
         with self.assertRaises(ValueError):
             r1 = Rectangle(-1, 2)
         with self.assertRaises(ValueError):
             r2 = Rectangle(1, -2)
+        with self.assertRaises(ValueError):
+            r3 = Rectangle(1, 2, -3)
+        with self.assertRaises(ValueError):
+            r4 = Rectangle(1, 2, 3, -4)
+        with self.assertRaises(ValueError):
+            r5 = Rectangle(0, 2)
+        with self.assertRaises(ValueError):
+            r6 = Rectangle(1, 0)
+
+    def test_rectangle_area(self):
+        """area is correctly calcultaed for rectangle"""
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(r1.area(), 2)
