@@ -90,3 +90,9 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(10, 2, 1, 9, 22)
         r1_dictionary = r1.to_dictionary()
         self.assertEqual(r1_dictionary, {'x': 1, 'y': 9, 'id': 22, 'height': 2, 'width': 10})
+
+    def test_rectangle_update(self):
+        """update changes each argument for rectangle"""
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        r1.update(89)
+        self.assertEqual(r1.id, 89)
