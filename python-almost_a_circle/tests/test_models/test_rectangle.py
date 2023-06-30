@@ -33,3 +33,16 @@ class TestRectangle(unittest.TestCase):
         """string argument throws error at every argument position"""
         with self.assertRaises(TypeError):
             r1 = Rectangle("1", 2)
+        with self.assertRaises(TypeError):
+            r2 = Rectangle(1, "2")
+        with self.assertRaises(TypeError):
+            r3 = Rectangle(1, 2, "3", 4)
+        with self.assertRaises(TypeError):
+            r4 = Rectangle(1, 2, 3, "4")
+
+    def test_args_negative(self):
+        """negative argument throws error at every argument position"""
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(-1, 2)
+        with self.assertRaises(ValueError):
+            r2 = Rectangle(1, -2)
