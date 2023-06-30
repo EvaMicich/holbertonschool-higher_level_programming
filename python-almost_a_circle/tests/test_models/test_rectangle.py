@@ -8,7 +8,7 @@ class TestRectangle(unittest.TestCase):
     checks that variables can be added
     deiiferen number of args
     """
-    def test_args(self):
+    def test_args_work(self):
         """arguments correctly assigned"""
         r1 = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(r1.width, 1)
@@ -29,7 +29,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r4.width, 1)
         self.assertEqual(r4.height, 2)
 
-    def test_args(self):
+    def test_args_str(self):
         """string argument throws error at every argument position"""
         r1 = Rectangle(1, 2, 3, 4, 5)
         with self.assertRaises(TypeError):
@@ -43,3 +43,12 @@ class TestRectangle(unittest.TestCase):
         r4 = Rectangle(1, 2, 3, 4, 5)
         with self.assertRaises(TypeError):
             r4.y = "4"
+
+    def test_args_negative(self):
+        """string argument throws error at every argument position"""
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        with self.assertRaises(ValueError):
+            r1.width = -1
+        r2 = Rectangle(1, 2, 3, 4, 5)
+        with self.assertRaises(ValueError):
+            r2.height = -1
