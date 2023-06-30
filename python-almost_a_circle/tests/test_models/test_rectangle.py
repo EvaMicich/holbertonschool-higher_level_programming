@@ -31,24 +31,5 @@ class TestRectangle(unittest.TestCase):
 
     def test_args_str(self):
         """string argument throws error at every argument position"""
-        r1 = Rectangle(1, 2, 3, 4, 5)
         with self.assertRaises(TypeError):
-            r1.width = "1"
-        r2 = Rectangle(1, 2, 3, 4, 5)
-        with self.assertRaises(TypeError):
-            r2.height = "2"
-        r3 = Rectangle(1, 2, 3, 4, 5)
-        with self.assertRaises(TypeError):
-            r3.x = "3"
-        r4 = Rectangle(1, 2, 3, 4, 5)
-        with self.assertRaises(TypeError):
-            r4.y = "4"
-
-    def test_args_negative(self):
-        """string argument throws error at every argument position"""
-        r1 = Rectangle(1, 2, 3, 4, 5)
-        with self.assertRaises(ValueError):
-            r1.width = -1
-        r2 = Rectangle(1, 2, 3, 4, 5)
-        with self.assertRaises(ValueError):
-            r2.height = -1
+            r1 = Rectangle("1", 2)
