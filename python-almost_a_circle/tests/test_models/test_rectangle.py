@@ -1,6 +1,8 @@
 """unittest for rectangle module"""
 import unittest
 from models.rectangle import Rectangle
+import io
+import sys
 
 class TestRectangle(unittest.TestCase):
     """
@@ -64,3 +66,12 @@ class TestRectangle(unittest.TestCase):
         """the string method delivers expected custom message"""
         r1 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(str(r1), "[Rectangle] (12) 2/1 - 4/6")
+
+    def test_rectangle_display(self):
+        """the string method delivers expected custom message"""
+        out = io.StringIO()
+        sys.stdout = out
+        r1 = Rectangle(1, 1)
+        r1.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(out.getvalue(), "#\n")
