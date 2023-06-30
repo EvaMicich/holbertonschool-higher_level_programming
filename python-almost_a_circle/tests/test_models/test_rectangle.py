@@ -84,3 +84,9 @@ class TestRectangle(unittest.TestCase):
         r1.display()
         sys.stdout = sys.__stdout__
         self.assertEqual(out.getvalue(), "\n #\n")
+
+    def test_rectangle_todictionary(self):
+        """the rectangle is converted to a dictionary"""
+        r1 = Rectangle(10, 2, 1, 9, 22)
+        r1_dictionary = r1.to_dictionary()
+        self.assertEqual(r1_dictionary, {'x': 1, 'y': 9, 'id': 22, 'height': 2, 'width': 10})
