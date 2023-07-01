@@ -2,6 +2,7 @@
 import unittest
 from models.rectangle import Rectangle
 import io
+import os
 import sys
 
 class TestRectangle(unittest.TestCase):
@@ -108,6 +109,7 @@ class TestRectangle(unittest.TestCase):
         with open("Rectangle.json", 'r') as f2:
             r2 = f2.read()
         self.assertEqual(r2, '[]')
+        os.remove("Rectangle.json")
 
     def test_rectangle_save_to_file_empty(self):
         """rectangle save to file, read file contents are correct"""
@@ -115,6 +117,7 @@ class TestRectangle(unittest.TestCase):
         with open("Rectangle.json", 'r') as f:
             r1 = f.read()
         self.assertEqual(r1, '[]')
+        os.remove("Rectangle.json")
 
     def test_rectangle_load(self):
         """testing the load file method, expected rect back"""
@@ -123,3 +126,4 @@ class TestRectangle(unittest.TestCase):
         Rectangle.save_to_file(list_rectangles_input)
         list_rectangles_output = Rectangle.load_from_file()
         self.assertEqual(str(list_rectangles_output[0]), '[Rectangle] (88) 2/8 - 10/7')
+        os.remove("Rectangle.json")
