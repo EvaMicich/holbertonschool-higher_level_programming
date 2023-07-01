@@ -108,3 +108,11 @@ class TestRectangle(unittest.TestCase):
         with open("Rectangle.json", 'r') as f:
             r1 = f.read()
         self.assertEqual(r1, '[{"x": 0, "y": 0, "id": 21, "height": 2, "width": 1}]')
+
+    def test_rectangle_load(self):
+        """testing the load file method, expected rect back"""
+        r1 = Rectangle(10, 7, 2, 8, 88)
+        list_rectangles_input = [r1]
+        Rectangle.save_to_file(list_rectangles_input)
+        list_rectangles_output = Rectangle.load_from_file()
+        self.assertEqual(str(list_rectangles_output[0]), '[Rectangle] (88) 2/8 - 10/7')
