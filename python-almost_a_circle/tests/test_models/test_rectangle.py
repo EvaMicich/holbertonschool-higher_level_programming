@@ -98,6 +98,13 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.id, 89)
 
     def test_rectangle_create(self):
-        """update changes each argument for rectangle"""
+        """create new instance of rectangle with args as parameters"""
         r1 = Rectangle.create(**{ 'id': 89 })
         self.assertEqual(r1.id, 89)
+
+    def test_rectangle_save_to_file(self):
+        """rectangle"""
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", 'r') as f:
+            r1 = f.read()
+        self.assertEqual(r1, '[]')
