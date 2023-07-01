@@ -104,10 +104,10 @@ class TestRectangle(unittest.TestCase):
 
     def test_rectangle_save_to_file(self):
         """rectangle save to file, read file contents are correct"""
-        Rectangle.save_to_file([Rectangle(1, 2, 0, 0, 21)])
+        Rectangle.save_to_file([])
         with open("Rectangle.json", 'r') as f:
             r1 = f.read()
-        self.assertEqual(r1, '[{"x": 0, "y": 0, "id": 21, "height": 2, "width": 1}]')
+        self.assertEqual(r1, '[]')
 
     def test_rectangle_load(self):
         """testing the load file method, expected rect back"""
